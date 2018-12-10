@@ -1,3 +1,67 @@
-<h1>
-  {{title}}
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Vertical (basic) form</h2>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" [(ngModel)]="userData.name"  name="name"  class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" [(ngModel)]="userData.pass"  name="pass" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+    </div>
+<!--     <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div> -->
+    <input type="" ng-value="" name="">
+
+    <button type="button" (click)="getDetails()" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<h3 ng-bind="firstName"></h3>
+
+<div>City: {{firstName + " " + userData.pass}} </div>
+<div>City: {{getfullName()}} </div>
+<div value="badHtml"></div>
+
+
+<tr  *ngFor="let det of employeeDetails"> 
+    <td>{{det.name}} {{det.gender}}</td>
+
+</tr>
+
+<tr *ngIf="employeeDetails <= 0">
+  <td>Noe Data </td>
+
+</tr>
+<button (click)="showPass()">Show Password</button>
+
+{{details}}
+
+
+
+
+<tr  *ngFor="let empde of exEmp"> 
+    <td>{{empde.name}} {{empde.gender}}</td>
+
+</tr>
+
+
+{{exEmp.name}}
+
+
+{{titleNew}}
+</body>
+</html>
